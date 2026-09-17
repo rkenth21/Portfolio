@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <!-- Site Page Preloader -->
+    <div id="page-preloader" class="page-preloader-overlay">
+        <div class="preloader-content">
+            <div class="spinner"></div>
+            <p>Loading Portfolio...</p>
+        </div>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header class="header">
+        <a href="#about" class="logo"><span>Portfolio</span></a>
+
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-container reveal">
+            <img src="image.jpg" alt="Profile Image">
+
+            <div class="info-box">
+                <h3>Hello, I'm</h3>
+                <h1>Richard Kenneth Erjas</h1>
+                <span>Frontend Developer / Author / Logo Maker</span>
+                
+                <div class="btn-group">
+                    <button id="download-cv-btn" class="btn download-btn" data-file="erjas.pdf">
+                        Download CV
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fullscreen Preloader Overlay -->
+    <div id="cv-preloader" class="preloader-overlay preloader-hidden" aria-hidden="true">
+        <div class="preloader-content">
+            <div class="spinner"></div>
+            <p>Preparing your download...</p>
+        </div>
+    </div>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <h2 class="section-title reveal">Experience</h2>
+
+        <div class="experience-info">
+            <div class="grid">
+                <div class="grid-card reveal delay-1">
+                    <i class="fa-solid fa-code"></i>
+                    <span>Front End Developer</span>
+                    <p>I care deeply about building web applications that feel effortless to use. From smooth animations to rock-solid design systems, I write clean, scalable code that transforms static visuals into engaging digital products.</p>
+                </div>
+
+                <div class="grid-card reveal delay-2">
+                    <i class="fa-solid fa-crop"></i>
+                    <span>Logo Design</span>
+                    <p>I specialize in translating a business’s core mission into clean, memorable logos and scalable brand systems designed to make a lasting impression.</p>
+                </div>
+
+                <div class="grid-card reveal delay-3">
+                    <i class="fa-solid fa-list-check"></i>
+                    <span>Novel Author</span>
+                    <p>From high-stakes plotting to quiet, character-driven fiction, I write books designed to keep readers turning pages late into the night.</p>
+                </div>
+
+                <div class="grid-card reveal delay-4">
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <span>CSR</span>
+                    <p>I bridge the gap between complex processes and user needs. Whether de-escalating tense situations or streamlining support workflows, my goal is always the same: leaving every customer better off than when they reached out.</p>
+                </div>
+            </div>
+
+            <img src="image.png" alt="Experience Image" class="reveal delay-2">
+        </div>
+    </section>
+
+    <!-- Projects Section (Swiper Showcase) -->
+    <section id="projects" class="projects">
+        <h2 class="section-title reveal">Recent Projects</h2>
+
+        <div class="projects-slider-wrapper reveal">
+            <div class="swiper projects-swiper">
+                <div class="swiper-wrapper">
+                    
+                    <!-- Slide 1 (Multiple Pictures) -->
+                    <div class="swiper-slide">
+                        <div class="project-card" data-images="diaper1.png, diaper2.png, diaper3.png, diaper4.png">
+                            <img src="project-1.png" alt="Project 1">
+                            <h3>Diaper</h3>
+                            <p>Click slide to view project images gallery.</p>
+                        </div>
+                       
+                    </div>
+
+                    <!-- Slide 2 (Multiple Pictures) -->
+                    <div class="swiper-slide">
+                        <div class="project-card" data-images="cerds4.jpg, cerds1.jpg, cerds2.jpg, cerds3.jpg">
+                            <img src="project-2.png" alt="Project 2">
+                            <h3>Android Development</h3>
+                            <p>Click slide to view project images gallery.</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 (Multiple Pictures) -->
+                    <div class="swiper-slide">
+                        <div class="project-card" data-images="drink1.png, drink2.png">
+                            <img src="project-3.png" alt="Project 3">
+                            <h3>Soda</h3>
+                            <p>Click slide to view project images gallery.</p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4 (Multiple Pictures) -->
+                    <div class="swiper-slide">
+                        <div class="project-card" data-images="tracing-1.png, tracing-2.png">
+                            <img src="tracing.png" alt="Project 4">
+                            <h3>Tracing Pad</h3>
+                            <p>Click slide to view project images gallery.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Pagination & Navigation Controls -->
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Gallery Lightbox Modal -->
+    <div id="project-lightbox" class="lightbox-modal" aria-hidden="true">
+        <div class="lightbox-overlay" id="lightbox-overlay"></div>
+        <div class="lightbox-content">
+            <button class="lightbox-close-btn" id="lightbox-close" aria-label="Close Lightbox">&times;</button>
+            <div class="swiper lightbox-swiper">
+                <div class="swiper-wrapper" id="lightbox-wrapper">
+                    <!-- Gallery pictures dynamically injected here -->
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="input-box reveal">
+            <h2 class="section-title">Contact Me</h2>
+
+            <div class="icon-container">
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/rkenth21/about/?fb_profile_edit_entry_point=%7B%22click_point%22%3A%22edit_profile_button%22%2C%22feature%22%3A%22profile_header%22%7D&id=100014174197726&sk=about" target="_blank" rel="noopener noreferrer" class="icon-link facebook" aria-label="Facebook">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                    </svg>
+                    <span class="icon-tooltip">Facebook</span>
+                </a>
+
+                <!-- Email -->
+                <a href="mailto:rkenth21@gmail.com" class="icon-link email" aria-label="Email">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                    </svg>
+                    <span class="icon-tooltip">Email</span>
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://instagram.com/yourusername" target="_blank" rel="noopener noreferrer" class="icon-link instagram" aria-label="Instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                    <span class="icon-tooltip">Instagram</span>
+                </a>
+
+                <!-- Viber -->
+                <a href="viber://chat?number=%2B639626798502" target="_blank" rel="noopener noreferrer" class="icon-link viber" aria-label="Viber">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        <path d="M14 2a6 6 0 0 1 6 6"></path>
+                        <path d="M14 6a2 2 0 0 1 2 2"></path>
+                    </svg>
+                    <span class="icon-tooltip">Viber</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-top-btn" class="scroll-top-btn" aria-label="Scroll to Top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <p class="copyright">&copy; All Rights Reserved</p>
+    </footer>
+
+    <!-- Swiper JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
